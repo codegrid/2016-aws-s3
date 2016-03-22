@@ -1,9 +1,14 @@
 'use strict';
 
+var del = require('del');
 var gulp = require('gulp');
 var awspublish = require('gulp-awspublish');
 
-gulp.task('build', function() {
+gulp.task('clean', function() {
+  return del('build');
+})
+
+gulp.task('build', ['clean'], function() {
   return gulp.src('src/**/*')
     .pipe(gulp.dest('build'));
 });
