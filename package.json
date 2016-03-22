@@ -5,7 +5,8 @@
     "gulp-awspublish": "^3.0.1"
   },
   "scripts": {
-    "deploy": "gulp deploy"
+    "deploy": "gulp deploy",
+    "test": "exit 0"
   },
   "private": true
 }
