@@ -3,7 +3,12 @@
 var gulp = require('gulp');
 var awspublish = require('gulp-awspublish');
 
-gulp.task('deploy', function(callback) {
+gulp.task('build', function() {
+  return gulp.src('src/**/*')
+    .pipe(gulp.dest('build'));
+});
+
+gulp.task('deploy', ['build'], function(callback) {
   var publisher = awspublish.create({
     "params": {
       "Bucket": "www.example.com"
