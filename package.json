@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-awspublish": "^3.0.1"
+  },
+  "scripts": {
+    "deploy": "gulp deploy"
+  },
+  "private": true
+}
